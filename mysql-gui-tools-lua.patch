@@ -1,0 +1,12 @@
+diff -Nur mysql-gui-tools-5.0r4.orig/mysql-gui-common/configure.in mysql-gui-tools-5.0r4.chng/mysql-gui-common/configure.in
+--- mysql-gui-tools-5.0r4.orig/mysql-gui-common/configure.in	2006-09-11 15:50:02.000000000 +0200
++++ mysql-gui-tools-5.0r4.chng/mysql-gui-common/configure.in	2006-10-12 19:10:19.000000000 +0200
+@@ -165,7 +165,7 @@
+ 	[LUA_CFLAGS=-I$withval])
+ AC_ARG_WITH(lua-libs,
+ [  --with-lua-libs              directory where Lua libraries are located],
+-        [LUA_LDFLAGS="$withval -llua -llualib"])
++        [LUA_LDFLAGS="$withval"])
+ 
+ if test x"$LUA_CFLAGS$LUA_LDFLAGS" = "x"; then
+   AC_CHECK_PROG(LUA_CFLAGS,lua-config,`lua-config --include`)
