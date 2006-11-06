@@ -32,19 +32,19 @@ BuildRequires:	popt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GUI Tools for MySQL 5.0 is a suite of applications written for developing
-and managing MySQL servers. 
+GUI Tools for MySQL 5.0 is a suite of applications written for
+developing and managing MySQL servers. 
 
 This package contains data files and libraries for MySQL GUI Tools.
-Actual applications are in packages mysql-administrator, mysql-query-browser
-and mysql-workbench.
+Actual applications are in mysql-administrator, mysql-query-browser
+and mysql-workbench packages.
 
 %description -l pl
-GUI Tools dla MySQL-a 5.0 to zestaw aplikacji do rozwijania i zarz±dzania 
-serwerami MySQL.
+GUI Tools dla MySQL-a 5.0 to zestaw aplikacji do rozwijania i
+zarz±dzania serwerami MySQL.
 
 Ten pakiet zawiera pliki danych i bibliotek dla MySQL GUI Tools.
-W³a¶ciwe aplikacje znajduj± siê w pakietach mysql-administrator, 
+W³a¶ciwe aplikacje znajduj± siê w pakietach mysql-administrator,
 mysq-query-browser oraz mysql-workbench.
 
 %package -n mysql-administrator
@@ -69,7 +69,7 @@ MySQL Administrator jest potê¿nym graficznym narzêdziem umo¿liwiaj±cym
 interfejsowi i logicznemu usytuowaniu elementów jest bardzo ³atwy i
 intuicyjny w obs³udze.
 
-Ten pakiet zawiera MySQL Administrator %{ma_realversion}
+Ten pakiet zawiera MySQL Administrator %{ma_realversion}.
 
 %package -n mysql-query-browser
 Summary:	Query shell for MySQL 5.0
@@ -106,8 +106,8 @@ MySQL Workbench is a database modeling tool for MySQL. You can use it
 to design and create new database schemas, document existing databases
 and even perform complex migrations to MySQL.
 
-MySQL Workbench requires OpenGL and a 3D accelerated graphics card with
-at least 16MB of memory.
+MySQL Workbench requires OpenGL and a 3D accelerated graphics card
+with at least 16MB of memory.
 
 This is MySQL Workbench %{wb_realversion}.
 
@@ -117,8 +117,10 @@ Mo¿na u¿ywaæ go do projektowania i tworzenia schematów nowych baz
 danych, dokumentowania istniej±cych baz danych, a nawet wykonywania
 skomplikowanych migracji do MySQL-a.
 
-MySQL Workbench wymaga OpenGL i karty graficznej ze sprzêtow± akceleracj± 
-operacji 3D z minimum 16 MB pamiêci.
+MySQL Workbench wymaga OpenGL-a i karty graficznej ze sprzêtow±
+akceleracj± operacji 3D z minimum 16 MB pamiêci.
+
+Ten pakiet zawiera MySQL Workbench %{wb_realversion}.
 
 %prep
 %setup -q -n %{name}-%{version}%{_rel}
@@ -184,7 +186,8 @@ for dir in \
 	mysql-query-browser \
 	mysql-workbench
 do
-	make -C $dir -k DESTDIR=$RPM_BUILD_ROOT install
+	%{__make} -C $dir -k install \
+		DESTDIR=$RPM_BUILD_ROOT
 done
 
 %find_lang mysql-administrator
@@ -202,6 +205,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/mysql-gui/common/grt/db
 %dir %{_datadir}/mysql-gui/common/grt/icons
 %dir %{_datadir}/mysql-gui/common/grt/icons/structs
+# FIXME: "*" duplicates all below
 %{_datadir}/mysql-gui/common/*
 %{_datadir}/mysql-gui/common/lua/*.lua
 %{_datadir}/mysql-gui/common/grt/*.xml
@@ -215,24 +219,24 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/mysql-administrator
 %attr(755,root,root) %{_bindir}/mysql-administrator-bin
 %dir %{_datadir}/mysql-gui/administrator
-%{_datadir}/mysql-gui/MySQLIcon_Admin*
 %{_datadir}/mysql-gui/administrator/*
-%{_datadir}/applications/MySQLAdministrator.desktop
+%{_datadir}/mysql-gui/MySQLIcon_Admin*
+%{_desktopdir}/MySQLAdministrator.desktop
 
 %files -n mysql-query-browser -f mysql-query-browser.lang
 %defattr(644,root,root,755)
-%dir %{_datadir}/mysql-gui/query-browser
-%{_datadir}/mysql-gui/query-browser/*
 %attr(755,root,root) %{_bindir}/mysql-query-browser
 %attr(755,root,root) %{_bindir}/mysql-query-browser-bin
+%dir %{_datadir}/mysql-gui/query-browser
+%{_datadir}/mysql-gui/query-browser/*
 %{_datadir}/mysql-gui/MySQLIcon_Query*
-%{_datadir}/applications/MySQLQueryBrowser.desktop
+%{_desktopdir}/MySQLQueryBrowser.desktop
 
 %files -n mysql-workbench
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/mysql-workbench
 %attr(755,root,root) %{_bindir}/mysql-workbench-bin
 %dir %{_datadir}/mysql-gui/workbench
-%{_datadir}/mysql-gui/MySQLIcon_Workbench*
 %{_datadir}/mysql-gui/workbench/*
-%{_datadir}/applications/MySQLWorkbench.desktop
+%{_datadir}/mysql-gui/MySQLIcon_Workbench*
+%{_desktopdir}/MySQLWorkbench.desktop
