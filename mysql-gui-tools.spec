@@ -1,4 +1,6 @@
-%define		_rel	r4
+# TODO:
+# 	doesn't compile with libstdc++-4.2.0
+%define		_rel	r5
 
 %define		ma_realversion	1.2.4-rc
 %define		qb_realversion	1.2.4-beta
@@ -12,7 +14,7 @@ Release:	0.%{_rel}.1
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://sunsite.icm.edu.pl/mysql/Downloads/MySQLGUITools/%{name}-%{version}%{_rel}.tar.gz
-# Source0-md5:	2ea9381174c19942cf0976ded88fea17
+# Source0-md5:	57a3ea4c15bf085437e81edc4edcb2c1
 Patch0:		%{name}-lua.patch
 Patch1:		%{name}-termcap.patch
 URL:		http://www.mysql.com/products/tools/
@@ -23,12 +25,13 @@ BuildRequires:	gtkhtml-devel >= 3.6.0
 BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libglade2-devel >= 1:2.0.0
 BuildRequires:	libgtkhtml-devel
-BuildRequires:	lua-devel >= 5.0
+BuildRequires:	lua-devel >= 5.0.3-2
 BuildRequires:	mysql-devel
 BuildRequires:	pcre-devel >= 3.9
 BuildRequires:	perl-XML-Parser
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel
+BuildRequires:	OpenGL-GLU-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
