@@ -1,0 +1,13 @@
+--- mysql-gui-tools-5.0r5/mysql-gui-common/library/utilities/include/myx_util_functions.h.orig	2006-11-27 21:04:53.000000000 +0000
++++ mysql-gui-tools-5.0r5/mysql-gui-common/library/utilities/include/myx_util_functions.h	2006-11-27 21:05:41.000000000 +0000
+@@ -98,8 +98,8 @@
+   typedef __int64 longlong;
+   typedef unsigned __int64 ulonglong;
+ #else
+-# define min(a,b) ((a)<(b)?(a):(b))
+-# define max(a,b) ((a)>(b)?(a):(b))
++  static inline size_t min( size_t a, size_t b ) { return ( ( a < b ) ? a : b ); }
++  static inline size_t max( size_t a, size_t b ) { return ( ( a > b ) ? a : b ); }
+ 
+   typedef unsigned char uint8;
+   typedef unsigned char uchar;
