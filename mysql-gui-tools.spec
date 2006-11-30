@@ -1,10 +1,8 @@
-# TODO:
-# 	doesn't compile with libstdc++-4.2.0
-%define		_rel	r5
+%define		_rel	r6
 
-%define		ma_realversion	1.2.4-rc
-%define		qb_realversion	1.2.4-beta
-%define		wb_realversion	1.1.4-alpha
+%define		ma_realversion	1.2.5-rc
+%define		qb_realversion	1.2.5-beta
+%define		wb_realversion	1.1.5-alpha
 
 Summary:	GUI Tools for MySQL 5.0 - common files
 Summary(pl):	Narzêdzia GUI dla MySQL-a 5.0 - pliki wspólne
@@ -14,9 +12,10 @@ Release:	0.%{_rel}.1
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://sunsite.icm.edu.pl/mysql/Downloads/MySQLGUITools/%{name}-%{version}%{_rel}.tar.gz
-# Source0-md5:	57a3ea4c15bf085437e81edc4edcb2c1
+# Source0-md5:	5437fef97dd072dd291afafc58b78a58
 Patch0:		%{name}-lua.patch
 Patch1:		%{name}-termcap.patch
+Patch2:		%{name}-gcc42.patch
 URL:		http://www.mysql.com/products/tools/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -129,6 +128,7 @@ Ten pakiet zawiera MySQL Workbench %{wb_realversion}.
 %setup -q -n %{name}-%{version}%{_rel}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 PKG_CONFIG=pkg-config
