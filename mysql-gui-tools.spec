@@ -8,7 +8,7 @@ Summary:	GUI Tools for MySQL 5.0 - common files
 Summary(pl):	Narzêdzia GUI dla MySQL-a 5.0 - pliki wspólne
 Name:		mysql-gui-tools
 Version:	5.0
-Release:	0.%{_rel}.1
+Release:	0.%{_rel}.2
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://sunsite.icm.edu.pl/mysql/Downloads/MySQLGUITools/%{name}-%{version}%{_rel}.tar.gz
@@ -16,6 +16,7 @@ Source0:	http://sunsite.icm.edu.pl/mysql/Downloads/MySQLGUITools/%{name}-%{versi
 Patch0:		%{name}-lua.patch
 Patch1:		%{name}-termcap.patch
 Patch2:		%{name}-gcc42.patch
+Patch3:		%{name}-workbench.patch
 URL:		http://www.mysql.com/products/tools/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -129,6 +130,7 @@ Ten pakiet zawiera MySQL Workbench %{wb_realversion}.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 PKG_CONFIG=pkg-config
@@ -177,7 +179,7 @@ cd mysql-workbench
 %{__automake}
 %configure \
 	--with-gtkhtml=libgtkhtml-3.8 \
-	--with-commondirname=workbench
+	--with-commondirname=common
 %{__make}
 
 %install
