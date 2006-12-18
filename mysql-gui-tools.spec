@@ -17,6 +17,7 @@ Patch0:		%{name}-lua.patch
 Patch1:		%{name}-termcap.patch
 Patch2:		%{name}-gcc42.patch
 Patch3:		%{name}-workbench.patch
+Patch4:		%{name}-bash.patch
 URL:		http://www.mysql.com/products/tools/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -131,6 +132,7 @@ Ten pakiet zawiera MySQL Workbench %{wb_realversion}.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 PKG_CONFIG=pkg-config
