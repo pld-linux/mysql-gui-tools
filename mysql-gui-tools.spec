@@ -18,6 +18,7 @@ Patch1:		%{name}-termcap.patch
 Patch2:		%{name}-gcc42.patch
 Patch3:		%{name}-workbench.patch
 Patch4:		%{name}-bash.patch
+Patch5:		%{name}-global.patch
 URL:		http://www.mysql.com/products/tools/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -27,7 +28,7 @@ BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libglade2-devel >= 1:2.0.0
 BuildRequires:	libgtkhtml-devel
 BuildRequires:	libuuid-devel
-BuildRequires:	lua-devel >= 5.0.3-2
+BuildRequires:	lua50-devel >= 5.0.3-2
 BuildRequires:	mysql-devel
 BuildRequires:	pcre-devel >= 3.9
 BuildRequires:	perl-XML-Parser
@@ -134,6 +135,7 @@ Ten pakiet zawiera MySQL Workbench %{wb_realversion}.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
 
 %build
 PKG_CONFIG=pkg-config
