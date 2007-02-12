@@ -5,7 +5,7 @@
 %define		wb_realversion	1.1.6-alpha
 
 Summary:	GUI Tools for MySQL 5.0 - common files
-Summary(pl):	Narzêdzia GUI dla MySQL-a 5.0 - pliki wspólne
+Summary(pl.UTF-8):   NarzÄ™dzia GUI dla MySQL-a 5.0 - pliki wspÃ³lne
 Name:		mysql-gui-tools
 Version:	5.0
 Release:	0.%{_rel}.1
@@ -45,17 +45,17 @@ This package contains data files and libraries for MySQL GUI Tools.
 Actual applications are in mysql-administrator, mysql-query-browser
 and mysql-workbench packages.
 
-%description -l pl
+%description -l pl.UTF-8
 GUI Tools dla MySQL-a 5.0 to zestaw aplikacji do rozwijania i
-zarz±dzania serwerami MySQL.
+zarzÄ…dzania serwerami MySQL.
 
 Ten pakiet zawiera pliki danych i bibliotek dla MySQL GUI Tools.
-W³a¶ciwe aplikacje znajduj± siê w pakietach mysql-administrator,
+WÅ‚aÅ›ciwe aplikacje znajdujÄ… siÄ™ w pakietach mysql-administrator,
 mysq-query-browser oraz mysql-workbench.
 
 %package -n mysql-administrator
 Summary:	A MySQL server management, configuration and monitoring tool
-Summary(pl):	Narzêdzie do zarz±dzania, konfiguracji i monitorowania pracy serwera MySQL
+Summary(pl.UTF-8):   NarzÄ™dzie do zarzÄ…dzania, konfiguracji i monitorowania pracy serwera MySQL
 Group:		Applications/Databases
 Requires:	mysql-gui-tools = %{version}
 
@@ -69,17 +69,17 @@ graphical user interface.
 
 This is MySQL Administrator %{ma_realversion}.
 
-%description -n mysql-administrator -l pl
-MySQL Administrator jest potê¿nym graficznym narzêdziem umo¿liwiaj±cym
-³atwe administrowanie ca³ym ¶rodowiskiem MySQL. Dziêki przejrzystemu
-interfejsowi i logicznemu usytuowaniu elementów jest bardzo ³atwy i
-intuicyjny w obs³udze.
+%description -n mysql-administrator -l pl.UTF-8
+MySQL Administrator jest potÄ™Å¼nym graficznym narzÄ™dziem umoÅ¼liwiajÄ…cym
+Å‚atwe administrowanie caÅ‚ym Å›rodowiskiem MySQL. DziÄ™ki przejrzystemu
+interfejsowi i logicznemu usytuowaniu elementÃ³w jest bardzo Å‚atwy i
+intuicyjny w obsÅ‚udze.
 
 Ten pakiet zawiera MySQL Administrator %{ma_realversion}.
 
 %package -n mysql-query-browser
 Summary:	Query shell for MySQL 5.0
-Summary(pl):	Graficzna pow³oka do zapytañ MySQL-a 5.0
+Summary(pl.UTF-8):   Graficzna powÅ‚oka do zapytaÅ„ MySQL-a 5.0
 Group:		Applications/Databases
 Requires:	mysql-gui-tools = %{version}
 
@@ -92,18 +92,18 @@ It has several auxiliar features to facilitate work, such as query
 It's part of the MySQL Developer Suite.
 This is MySQL QueryBrowser %{qb_realversion}.
 
-%description -n mysql-query-browser -l pl
-MySQL Query Browser to narzêdzie z graficznym interfejsem do
-wykonywania zapytañ SQL. Wy¶wietla wyniki w postaci listy, gdzie mo¿na
-modyfikowaæ jej zawarto¶æ i zapisywaæ. Ma kilka dodatkowych mo¿liwo¶ci
-u³atwiaj±cych pracê, takie jak "zak³adki" dla zapytañ, historiê
-zapytañ, pod¶wietlanie sk³adni i pomoc podrêczn±.
+%description -n mysql-query-browser -l pl.UTF-8
+MySQL Query Browser to narzÄ™dzie z graficznym interfejsem do
+wykonywania zapytaÅ„ SQL. WyÅ›wietla wyniki w postaci listy, gdzie moÅ¼na
+modyfikowaÄ‡ jej zawartoÅ›Ä‡ i zapisywaÄ‡. Ma kilka dodatkowych moÅ¼liwoÅ›ci
+uÅ‚atwiajÄ…cych pracÄ™, takie jak "zakÅ‚adki" dla zapytaÅ„, historiÄ™
+zapytaÅ„, podÅ›wietlanie skÅ‚adni i pomoc podrÄ™cznÄ….
 
 Ten pakiet zawiera MySQL Query Browser %{qb_realversion}.
 
 %package -n mysql-workbench
 Summary:	Extensible modeling tool for MySQL 5.0
-Summary(pl):	Narzêdzie do modelowania baz danych dla MySQL-a 5.0
+Summary(pl.UTF-8):   NarzÄ™dzie do modelowania baz danych dla MySQL-a 5.0
 Group:		Applications/Databases
 Requires:	mysql-gui-tools = %{version}
 
@@ -117,14 +117,14 @@ with at least 16MB of memory.
 
 This is MySQL Workbench %{wb_realversion}.
 
-%description -n mysql-workbench -l pl
-MySQL Workbench to narzêdzie do modelowania baz danych dla MySQL-a.
-Mo¿na u¿ywaæ go do projektowania i tworzenia schematów nowych baz
-danych, dokumentowania istniej±cych baz danych, a nawet wykonywania
+%description -n mysql-workbench -l pl.UTF-8
+MySQL Workbench to narzÄ™dzie do modelowania baz danych dla MySQL-a.
+MoÅ¼na uÅ¼ywaÄ‡ go do projektowania i tworzenia schematÃ³w nowych baz
+danych, dokumentowania istniejÄ…cych baz danych, a nawet wykonywania
 skomplikowanych migracji do MySQL-a.
 
-MySQL Workbench wymaga OpenGL-a i karty graficznej ze sprzêtow±
-akceleracj± operacji 3D z minimum 16 MB pamiêci.
+MySQL Workbench wymaga OpenGL-a i karty graficznej ze sprzÄ™towÄ…
+akceleracjÄ… operacji 3D z minimum 16 MB pamiÄ™ci.
 
 Ten pakiet zawiera MySQL Workbench %{wb_realversion}.
 
