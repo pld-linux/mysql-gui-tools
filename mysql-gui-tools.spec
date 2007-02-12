@@ -5,7 +5,7 @@
 %define		wb_realversion	1.1.6-alpha
 
 Summary:	GUI Tools for MySQL 5.0 - common files
-Summary(pl.UTF-8):   Narzędzia GUI dla MySQL-a 5.0 - pliki wspólne
+Summary(pl.UTF-8):	Narzędzia GUI dla MySQL-a 5.0 - pliki wspólne
 Name:		mysql-gui-tools
 Version:	5.0
 Release:	0.%{_rel}.1
@@ -55,7 +55,7 @@ mysq-query-browser oraz mysql-workbench.
 
 %package -n mysql-administrator
 Summary:	A MySQL server management, configuration and monitoring tool
-Summary(pl.UTF-8):   Narzędzie do zarządzania, konfiguracji i monitorowania pracy serwera MySQL
+Summary(pl.UTF-8):	Narzędzie do zarządzania, konfiguracji i monitorowania pracy serwera MySQL
 Group:		Applications/Databases
 Requires:	mysql-gui-tools = %{version}
 
@@ -79,7 +79,7 @@ Ten pakiet zawiera MySQL Administrator %{ma_realversion}.
 
 %package -n mysql-query-browser
 Summary:	Query shell for MySQL 5.0
-Summary(pl.UTF-8):   Graficzna powłoka do zapytań MySQL-a 5.0
+Summary(pl.UTF-8):	Graficzna powłoka do zapytań MySQL-a 5.0
 Group:		Applications/Databases
 Requires:	mysql-gui-tools = %{version}
 
@@ -103,7 +103,7 @@ Ten pakiet zawiera MySQL Query Browser %{qb_realversion}.
 
 %package -n mysql-workbench
 Summary:	Extensible modeling tool for MySQL 5.0
-Summary(pl.UTF-8):   Narzędzie do modelowania baz danych dla MySQL-a 5.0
+Summary(pl.UTF-8):	Narzędzie do modelowania baz danych dla MySQL-a 5.0
 Group:		Applications/Databases
 Requires:	mysql-gui-tools = %{version}
 
