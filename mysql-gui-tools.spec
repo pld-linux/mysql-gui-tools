@@ -1,4 +1,4 @@
-%define		_rel	r8
+%define		_rel	r9
 
 %define		ma_realversion	1.2.6-rc
 %define		qb_realversion	1.2.6-beta
@@ -12,7 +12,7 @@ Release:	0.%{_rel}.1
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://sunsite.icm.edu.pl/mysql/Downloads/MySQLGUITools/%{name}-%{version}%{_rel}.tar.gz
-# Source0-md5:	6b30b4174655427ede256a51e0b77de1
+# Source0-md5:	5117b7c57b48630e3f966cb0baf8fdb3
 Patch0:		%{name}-lua.patch
 Patch1:		%{name}-termcap.patch
 Patch2:		%{name}-gcc42.patch
