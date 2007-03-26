@@ -4,6 +4,8 @@
 %define		qb_realversion	1.2.6-beta
 %define		wb_realversion	1.1.6-alpha
 
+%define		_gtkhtml_ver	3.14
+
 Summary:	GUI Tools for MySQL 5.0 - common files
 Summary(pl.UTF-8):	Narzędzia GUI dla MySQL-a 5.0 - pliki wspólne
 Name:		mysql-gui-tools
@@ -25,7 +27,7 @@ URL:		http://www.mysql.com/products/tools/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	gtkhtml-devel >= 3.6.0
+BuildRequires:	gtkhtml-devel >= 3.14.0
 BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libglade2-devel >= 1:2.0.0
 BuildRequires:	libgtkhtml-devel
@@ -151,7 +153,7 @@ cd mysql-gui-common
 %{__autoheader}
 %{__automake}
 %configure \
-	--with-gtkhtml=libgtkhtml-3.8 \
+	--with-gtkhtml=libgtkhtml-%{_gtkhtml_ver} \
 	--enable-canvas \
 	--enable-grt \
 	--with-lua-includes="`pkg-config lua50 --cflags-only-I | sed s:-I::`" \
@@ -175,7 +177,7 @@ cd mysql-query-browser
 %{__autoheader}
 %{__automake}
 %configure \
-	--with-gtkhtml=libgtkhtml-3.8
+	--with-gtkhtml=libgtkhtml-%{_gtkhtml_ver}
 %{__make}
 cd ..
 
@@ -186,7 +188,7 @@ cd mysql-workbench
 %{__autoheader}
 %{__automake}
 %configure \
-	--with-gtkhtml=libgtkhtml-3.8 \
+	--with-gtkhtml=libgtkhtml-%{_gtkhtml_ver} \
 	--with-commondirname=common
 %{__make}
 
