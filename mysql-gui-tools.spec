@@ -1,4 +1,4 @@
-%define		_rel	r9
+%define		_rel	r10
 
 %define		ma_realversion	1.2.6-rc
 %define		qb_realversion	1.2.6-beta
@@ -8,11 +8,11 @@ Summary:	GUI Tools for MySQL 5.0 - common files
 Summary(pl.UTF-8):	Narzędzia GUI dla MySQL-a 5.0 - pliki wspólne
 Name:		mysql-gui-tools
 Version:	5.0
-Release:	0.%{_rel}.1
+Release:	0.%{_rel}.0.1
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://sunsite.icm.edu.pl/mysql/Downloads/MySQLGUITools/%{name}-%{version}%{_rel}.tar.gz
-# Source0-md5:	5117b7c57b48630e3f966cb0baf8fdb3
+# Source0-md5:	6b67906f4c0ab70213f4a3064c7bfafd
 Patch0:		%{name}-lua.patch
 Patch1:		%{name}-termcap.patch
 Patch2:		%{name}-gcc42.patch
