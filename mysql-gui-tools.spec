@@ -1,8 +1,8 @@
 %define		_rel	r10
 
-%define		ma_realversion	1.2.6-rc
-%define		qb_realversion	1.2.6-beta
-%define		wb_realversion	1.1.6-alpha
+%define		ma_realversion	1.2.10
+%define		qb_realversion	1.2.10
+%define		wb_realversion	1.1.10-alpha
 
 %define		_gtkhtml_ver	3.14
 
