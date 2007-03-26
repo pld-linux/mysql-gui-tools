@@ -11,7 +11,8 @@ Version:	5.0
 Release:	0.%{_rel}.0.1
 License:	GPL
 Group:		Applications/Databases
-Source0:	http://sunsite.icm.edu.pl/mysql/Downloads/MySQLGUITools/%{name}-%{version}%{_rel}.tar.gz
+#Source0:	http://sunsite.icm.edu.pl/mysql/Downloads/MySQLGUITools/%{name}-%{version}%{_rel}.tar.gz
+Source0:	http://sunsite.informatik.rwth-aachen.de/mysql/Downloads/MySQLGUITools/%{name}-%{version}%{_rel}.tar.gz
 # Source0-md5:	6b67906f4c0ab70213f4a3064c7bfafd
 Patch0:		%{name}-lua.patch
 Patch1:		%{name}-termcap.patch
