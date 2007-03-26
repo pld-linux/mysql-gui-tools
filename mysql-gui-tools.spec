@@ -20,6 +20,7 @@ Patch2:		%{name}-gcc42.patch
 Patch3:		%{name}-workbench.patch
 Patch4:		%{name}-bash.patch
 Patch5:		%{name}-global.patch
+Patch6:		%{name}-configure.patch
 URL:		http://www.mysql.com/products/tools/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -137,6 +138,7 @@ Ten pakiet zawiera MySQL Workbench %{wb_realversion}.
 %patch3 -p1
 %patch4 -p1
 %patch5 -p1
+%patch6 -p1
 
 %build
 PKG_CONFIG=pkg-config
