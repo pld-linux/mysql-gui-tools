@@ -220,8 +220,11 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/mysql-gui/common/grt/db
 %dir %{_datadir}/mysql-gui/common/grt/icons
 %dir %{_datadir}/mysql-gui/common/grt/icons/structs
-# FIXME: "*" duplicates all below
-%{_datadir}/mysql-gui/common/*
+%{_datadir}/mysql-gui/common/*.gif
+%{_datadir}/mysql-gui/common/*.glade
+%{_datadir}/mysql-gui/common/*.png
+%{_datadir}/mysql-gui/common/*.txt
+%{_datadir}/mysql-gui/common/*.xml
 %{_datadir}/mysql-gui/common/lua/*.lua
 %{_datadir}/mysql-gui/common/grt/*.xml
 %{_datadir}/mysql-gui/common/grt/db/*.png
