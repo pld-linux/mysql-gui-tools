@@ -10,7 +10,7 @@ Summary:	GUI Tools for MySQL 5.0 - common files
 Summary(pl.UTF-8):	Narzędzia GUI dla MySQL-a 5.0 - pliki wspólne
 Name:		mysql-gui-tools
 Version:	5.0
-Release:	0.%{_rel}.1
+Release:	0.%{_rel}.2
 License:	GPL
 Group:		Applications/Databases
 #Source0:	http://sunsite.icm.edu.pl/mysql/Downloads/MySQLGUITools/%{name}-%{version}%{_rel}.tar.gz
@@ -29,6 +29,9 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gtkhtml-devel >= 3.14.0
 BuildRequires:	gtkmm-devel >= 2.4.0
+%ifarch i586 i686 pentium3 pentium4 athlon %{x8664}
+BuildRequires:	jdk
+%endif
 BuildRequires:	libglade2-devel >= 1:2.0.0
 BuildRequires:	libgtkhtml-devel
 BuildRequires:	libuuid-devel
@@ -153,6 +156,9 @@ cd mysql-gui-common
 %{__autoheader}
 %{__automake}
 %configure \
+%ifnarch i586 i686 pentium3 pentium4 athlon %{x8664}
+	--disable-java-modules \
+%endif
 	--with-gtkhtml=libgtkhtml-%{_gtkhtml_ver} \
 	--enable-canvas \
 	--enable-grt \
@@ -167,7 +173,6 @@ cd mysql-administrator
 %{__autoconf}
 %{__automake}
 %configure
-%{__make}
 cd ..
 
 # Query Browser
@@ -178,7 +183,6 @@ cd mysql-query-browser
 %{__automake}
 %configure \
 	--with-gtkhtml=libgtkhtml-%{_gtkhtml_ver}
-%{__make}
 cd ..
 
 # Workbench
@@ -190,7 +194,12 @@ cd mysql-workbench
 %configure \
 	--with-gtkhtml=libgtkhtml-%{_gtkhtml_ver} \
 	--with-commondirname=common
-%{__make}
+cd ..
+
+%{__make} -C mysql-gui-common
+%{__make} -C mysql-administrator
+%{__make} -C mysql-query-browser
+%{__make} -C mysql-workbench
 
 %install
 rm -rf $RPM_BUILD_ROOT
