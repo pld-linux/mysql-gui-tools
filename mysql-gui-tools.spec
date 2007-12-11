@@ -33,6 +33,7 @@ BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	jdk
 %endif
 BuildRequires:	libglade2-devel >= 1:2.0.0
+BuildRequires:	libgnomeprint-devel >= 2.2.0
 BuildRequires:	libgtkhtml-devel
 BuildRequires:	libuuid-devel
 BuildRequires:	lua50-devel >= 5.0.3-2
@@ -164,7 +165,7 @@ cd mysql-gui-common
 	--enable-grt \
 	--with-lua-includes="`pkg-config lua50 --cflags-only-I | sed s:-I::`" \
 	--with-lua-libs="`pkg-config lua50 --libs`"
-%{__make}
+%{__make} -j1
 cd ..
 
 # Administrator
