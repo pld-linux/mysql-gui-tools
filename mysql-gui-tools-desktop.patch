@@ -1,0 +1,8 @@
+--- mysql-gui-tools-5.0r12/mysql-administrator/MySQLAdministrator.desktop.in~	2006-08-16 15:15:59.000000000 +0200
++++ mysql-gui-tools-5.0r12/mysql-administrator/MySQLAdministrator.desktop.in	2010-05-12 13:48:51.646326813 +0200
+@@ -5,4 +5,4 @@
+ Terminal=false
+ Type=Application
+ Icon=#mydatadir#/MySQLIcon_Admin_48x48.png
+-Categories=GTK;Database;Development;Application
++Categories=GTK;Database;System;
