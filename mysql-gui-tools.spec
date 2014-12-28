@@ -28,7 +28,7 @@ URL:		http://www.mysql.com/products/tools/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dos2unix
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtkhtml-devel >= 3.14.0
 BuildRequires:	gtkmm-devel >= 2.4.0
 %ifarch i586 i686 pentium3 pentium4 athlon %{x8664}
